@@ -1,6 +1,4 @@
-# Hackathon 2023
-
-## Contrato inteligente: Semaforo
+## Contrato inteligente: Semáforo
 
 ## Inicio: Clonar el template para contratos inteligentes
 
