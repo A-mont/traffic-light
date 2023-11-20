@@ -1,7 +1,7 @@
 import { ProgramMetadata } from "@gear-js/api";
 import { useState } from "react";
 import { useApi, useAlert } from "@gear-js/react-hooks";
-import { Button } from "@chakra-ui/react";
+import { Button, Card, Center, Heading, VStack, Text } from "@chakra-ui/react";
 
 function ReadState() {
   const { api } = useApi();
@@ -34,21 +34,24 @@ function ReadState() {
   getState();
 
   return (
-    <div className="container">
-      <center>Full State</center>
-      <center className="state">
-        State
-        <p className="text"> {JSON.stringify(fullState)}</p>
-        <Button
-          borderRadius="50px"
-          w="400px"
-          h="400px"
-          backgroundColor={color ?? "black"}
-        >
-          Color
-        </Button>
-      </center>
-    </div>
+    <Card>
+      <Center>
+        <VStack>
+          <Heading>Traffic-light</Heading>
+          <Button
+            borderRadius="50px"
+            w="400px"
+            h="400px"
+            backgroundColor={color ?? "black"}
+          >
+            Light
+          </Button>
+
+          <Heading>State Contract</Heading>
+          <Text>{JSON.stringify(fullState)}</Text>
+        </VStack>
+      </Center>
+    </Card>
   );
 }
 
